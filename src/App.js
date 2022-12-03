@@ -23,11 +23,15 @@ function App() {
       if (word !== ""){
         owlbot.get(word).then((response) => {
           console.log(response);
+          setMsg("")
           setDefs(response.data.definitions)
         }).catch((reason) =>{
-          // console.log(reason)
+          console.log(reason)
           if (reason.response.status === 404){
             setMsg("Word was not found!");
+          }
+          else {
+            setMsg("Something went wrong!")
           }
         });
       }
