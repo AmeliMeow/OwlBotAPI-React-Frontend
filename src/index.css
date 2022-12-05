@@ -14,15 +14,6 @@ body {
   @apply bg-darker text-dark-200 mx-auto;
 }
 
-.container {
-  @apply px-2 lg:w-3/4 justify-center h-screen mx-auto text-center flex flex-col gap-5;
-}
-
-input[type="text"] {
-  @apply bg-dark rounded-full px-4 py-2 text-2xl;
-  /* @apply ring-2 ring-dark; */
-}
-
 p {
   @apply pb-2
 }
