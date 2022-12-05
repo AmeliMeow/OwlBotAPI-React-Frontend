@@ -8,12 +8,16 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'card-expand': 'expand 0.5s ease-out'
+        'expand': 'expand 0.5s ease-out'
       },
       keyframes: {
         expand:{
-          '0%' : { 'max-height': '0%' },
-          '100%' : { 'max-height': '100%' }
+          '0%' : { 
+            'height': '0%'
+          },
+          '100%' : { 
+            'height': '80%'
+          }
         }
       }
     },
