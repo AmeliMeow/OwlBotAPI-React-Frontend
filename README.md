@@ -1,6 +1,9 @@
 # OwlBot React.js Frontend
 
-Frontend application for [OwlBot API](https://owlbot.info/).
+Frontend application for [OwlBot Dictionaty API](https://owlbot.info/).
+OwlBot is a free English dictionary HTTP API.
+
+![](https://i.imgur.com/3PDaWJV.gif)
 
 Steps to get started:  
  1. Get API token from [**owlbot.info**](https://owlbot.info).
