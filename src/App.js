@@ -40,7 +40,7 @@ function App() {
 
   const Definition = (props) => (
     <div className="overflow-clip flex flex-col md:flex-row gap-4 rounded-lg bg-darker-800">
-      {props.image_url != null && <img className="bg-dark lg:w-52 lg:h-52 rounded-lg" src={props.image_url}></img>}
+      {props.image_url != null && <img className="bg-dark lg:w-52 lg:h-52 rounded-lg" alt={props.alt} src={props.image_url}></img>}
       <div className="text-left px-2 pt-1">
         <h2 className="italic font-bold text-xl">{props.type == null ? "Other" : props.type}</h2>
         <p>{props.def}</p>
@@ -58,12 +58,13 @@ function App() {
         onKeyDown={onKeyEnter} 
         type={'text'} 
         className="mx-2 bg-dark rounded-full px-4 py-2 text-2xl ring-2 ring-blue outline-2 outline-purple focus:outline" 
-        placeholder="Type a word and press Enter..."/>
+        placeholder="Type a word and press Enter..."
+        autoFocus={true}/>
       { msg !== "" && <p className="text-red">{msg}</p> }
       { defs.length > 0 &&
         <div className="flex overflow-y-auto h-4/5 flex-col gap-5 animate-expand">
-          { defs.map((def, i) => <Definition key={i} image_url={def.image_url} type={def.type} def={def.definition} eg={def.example}></Definition>) }
-      </div>}
+          { defs.map((def, i) => <Definition key={i} alt="Supplementary image" image_url={def.image_url} type={def.type} def={def.definition} eg={def.example}></Definition>) }
+        </div>}
     </div>
   );
 }
